@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ARCHIVO 0047 — NO SECURITY AGENCY</title>
+<title>NO SECURITY AGENCY — ARCHIVE</title>
 
 <style>
 
@@ -12,659 +12,1598 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     margin: 0;
-    min-height: 100vh;
+    min-height: 100%;
+}
+
+body {
+
     background:
-        radial-gradient(circle at center, #181818 0%, #070707 55%, #000000 100%);
-    font-family: "Courier New", monospace;
-    color: #202020;
+        radial-gradient(
+            circle at center,
+            #181818 0%,
+            #080808 55%,
+            #000000 100%
+        );
+
+    color: #111;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    padding: 55px 20px;
+
     overflow-x: hidden;
 }
 
-/* LETRAS ROJAS EN EL FONDO */
 
-.help-letter {
+/* =========================================
+   LETRAS ROJAS DEL FONDO
+   ========================================= */
+
+.red-letter {
+
     position: fixed;
-    color: #700000;
-    font-size: 18px;
+
+    color: #720000;
+
+    font-size: 43px;
+
     font-weight: bold;
-    opacity: 0.28;
+
     pointer-events: none;
-    z-index: 0;
+
     user-select: none;
+
+    opacity: 0.60;
+
+    z-index: 0;
 }
 
-/* Posiciones aparentemente aleatorias */
 
-.h1 { top: 8%; left: 7%; }
-.e1 { top: 21%; left: 91%; }
-.l1 { top: 43%; left: 4%; }
-.p1 { top: 72%; left: 94%; }
+/* Posiciones */
 
-.h2 { top: 86%; left: 13%; }
-.e2 { top: 62%; left: 89%; }
-.l2 { top: 34%; left: 96%; }
-.p2 { top: 13%; left: 18%; }
+.l1 {
+    top: 6%;
+    left: 11%;
+}
 
-.h3 { top: 91%; left: 76%; }
-.e3 { top: 5%; left: 63%; }
-.l3 { top: 57%; left: 2%; }
-.p3 { top: 29%; left: 87%; }
+.l2 {
+    top: 17%;
+    right: 18%;
+}
 
-.h4 { top: 47%; left: 94%; }
-.e4 { top: 78%; left: 4%; }
-.l4 { top: 16%; left: 80%; }
-.p4 { top: 68%; left: 91%; }
+.l3 {
+    top: 39%;
+    left: 5%;
+}
+
+.l4 {
+    top: 57%;
+    right: 8%;
+}
+
+.l5 {
+    top: 76%;
+    left: 17%;
+}
+
+.l6 {
+    top: 91%;
+    right: 25%;
+}
+
+.l7 {
+    top: 32%;
+    right: 42%;
+}
+
+.l8 {
+    top: 72%;
+    left: 45%;
+}
 
 
-/* DOCUMENTO */
+/* =========================================
+   IDIOMAS
+   ========================================= */
+
+.language-box {
+
+    position: fixed;
+
+    top: 14px;
+    right: 14px;
+
+    z-index: 20;
+
+    background: #080808;
+
+    border: 1px solid #444;
+
+    padding: 5px;
+}
+
+.language-box button {
+
+    background: #111;
+
+    color: #777;
+
+    border: 1px solid #333;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 12px;
+
+    padding: 5px 8px;
+
+    cursor: pointer;
+}
+
+.language-box button:hover {
+
+    color: white;
+
+    border-color: #777;
+}
+
+.language-box button.active {
+
+    background: #333;
+
+    color: white;
+}
+
+
+/* =========================================
+   DOCUMENTO
+   ========================================= */
 
 .paper {
+
     position: relative;
+
     z-index: 2;
 
-    width: 850px;
-    max-width: 90%;
-    margin: 55px auto;
+    max-width: 900px;
 
-    padding: 50px;
+    margin: auto;
 
     background:
         linear-gradient(
-            rgba(238,235,222,0.98),
-            rgba(225,221,205,0.98)
+            rgba(255,255,255,0.97),
+            rgba(225,225,225,0.97)
         );
 
-    border: 1px solid #999;
+    border: 1px solid #777;
 
     box-shadow:
-        0 0 35px rgba(0,0,0,0.8),
-        0 5px 15px rgba(0,0,0,0.5);
+        0 0 40px rgba(0,0,0,0.85),
+        inset 0 0 25px rgba(0,0,0,0.12);
 
-    min-height: 1000px;
+    padding: 45px;
 }
 
 
-/* AGENCIA */
+/* =========================================
+   ESQUINA DE LA AGENCIA
+   ========================================= */
 
-.agency {
+.agency-corner {
+
     position: absolute;
 
-    top: 20px;
-    right: 30px;
+    top: 15px;
+    right: 20px;
 
     text-align: right;
 
-    font-size: 11px;
-    line-height: 1.5;
+    font-size: 10px;
 
-    color: #444;
-}
+    color: #333;
 
-.agency strong {
-    font-size: 13px;
+    line-height: 1.4;
 }
 
 
-/* ENCABEZADO */
+/* =========================================
+   ENCABEZADO
+   ========================================= */
 
-.header {
-    border-bottom: 3px double #333;
-    padding-bottom: 16px;
-    margin-bottom: 30px;
+header {
+
+    border-bottom:
+        3px double #222;
+
+    padding-bottom: 15px;
+
+    margin-bottom: 25px;
 }
 
-.logo {
-    font-size: 21px;
-    font-weight: bold;
-    letter-spacing: 3px;
+header h1 {
+
+    margin: 0;
+
+    font-size: 25px;
+
+    letter-spacing: 2px;
 }
 
-.department {
-    margin-top: 6px;
+header p {
+
+    margin: 5px 0 0;
+
     font-size: 12px;
 }
 
 
-/* SELLO */
+/* =========================================
+   SELLO
+   ========================================= */
 
-.confidential {
-    position: absolute;
+.stamp {
 
-    top: 105px;
-    right: 50px;
+    display: inline-block;
 
-    border: 2px solid #7d0000;
-    color: #7d0000;
+    border: 2px solid #8b0000;
 
-    padding: 8px 13px;
+    color: #8b0000;
+
+    padding: 4px 8px;
+
+    transform: rotate(-4deg);
 
     font-weight: bold;
-    font-size: 13px;
 
-    transform: rotate(-8deg);
+    font-size: 12px;
+
+    margin-top: 12px;
 }
 
 
-/* TÍTULOS */
-
-h1 {
-    font-size: 24px;
-    letter-spacing: 1px;
-    margin-top: 35px;
-}
+/* =========================================
+   SECCIONES
+   ========================================= */
 
 h2 {
+
     font-size: 15px;
 
-    border-bottom: 1px solid #555;
+    border-bottom:
+        1px solid #555;
 
-    padding-bottom: 6px;
+    padding-bottom: 4px;
 
-    margin-top: 35px;
+    margin-top: 30px;
 }
 
 
-/* INFORMACIÓN */
+/* =========================================
+   INFORMACIÓN
+   ========================================= */
 
 .info {
+
     display: grid;
-    grid-template-columns: 1fr 1fr;
 
-    gap: 10px;
+    grid-template-columns:
+        1fr 1fr;
 
-    font-size: 14px;
+    gap: 8px 30px;
+
+    font-size: 13px;
 }
 
 .line {
-    border-bottom: 1px dotted #777;
 
-    padding: 7px;
+    border-bottom:
+        1px dotted #777;
+
+    padding: 5px 0;
+}
+
+.label {
+
+    font-weight: bold;
 }
 
 
-/* TEXTO OCULTO */
+/* =========================================
+   TEXTO
+   ========================================= */
 
-.secret {
-    background: #161616;
-    color: #161616;
+.text {
 
-    padding: 1px 5px;
+    font-size: 13px;
 
-    cursor: help;
-
-    border-radius: 1px;
-
-    transition:
-        color 0.15s ease,
-        background 0.15s ease;
-}
-
-.secret:hover {
-    color: #e5e1d5;
-    background: #242424;
+    line-height: 1.65;
 }
 
 
-/* OBSERVACIONES */
+/* =========================================
+   INCIDENTE
+   ========================================= */
 
-.observation {
-    font-size: 14px;
-    line-height: 1.8;
-}
+.incident {
 
-.quote {
-    margin: 25px 20px;
+    border-left:
+        4px solid #444;
 
     padding-left: 15px;
 
-    border-left: 3px solid #555;
+    margin-top: 15px;
+}
+
+
+/* =========================================
+   ADVERTENCIA
+   ========================================= */
+
+.warning {
+
+    color: #700000;
 
     font-weight: bold;
 }
 
 
-/* ADVERTENCIA */
+/* =========================================
+   SECRETOS
+   ========================================= */
 
-.warning {
-    margin-top: 35px;
+/*
+   Las palabras están ocultas dentro
+   del texto normal.
 
-    padding: 12px;
+   No existe una sección de "secretos".
+*/
 
-    border: 1px solid #777;
+.secret {
 
-    background: #d8d4c7;
+    background: #050505;
 
-    font-size: 11px;
+    color: #050505;
+
+    padding:
+        0 4px;
+
+    border:
+        1px solid #111;
+
+    cursor: text;
+
+    user-select: text;
+
+    transition:
+        color 0.05s;
 }
 
 
-/* PIE */
+/*
+   Cuando el usuario selecciona la palabra,
+   el navegador la muestra.
+*/
 
-.footer {
-    margin-top: 50px;
+.secret::selection {
 
-    padding-top: 12px;
+    background: #333;
 
-    border-top: 1px solid #555;
+    color: white;
+}
 
-    text-align: center;
+.secret::-moz-selection {
+
+    background: #333;
+
+    color: white;
+}
+
+
+/*
+   Pequeña diferencia visual para que
+   parezca una censura real.
+*/
+
+.secret:hover {
+
+    background: #111;
+}
+
+
+/* =========================================
+   PIE
+   ========================================= */
+
+footer {
+
+    border-top:
+        1px solid #555;
+
+    margin-top: 35px;
+
+    padding-top: 10px;
 
     font-size: 10px;
 
-    line-height: 1.6;
-}
+    color: #444;
 
-.stamp {
-    display: inline-block;
+    display: flex;
 
-    margin-top: 30px;
+    justify-content:
+        space-between;
 
-    border: 2px solid #333;
-
-    padding: 10px 20px;
-
-    font-weight: bold;
-
-    transform: rotate(-2deg);
+    gap: 20px;
 }
 
 
-/* MÓVIL */
+/* =========================================
+   MÓVIL
+   ========================================= */
 
-@media (max-width: 700px) {
+@media (max-width: 650px) {
 
     .paper {
-        margin: 15px auto;
+
         padding: 25px;
     }
 
-    .agency {
-        position: static;
-        text-align: left;
-        margin-bottom: 20px;
-    }
-
-    .confidential {
-        position: static;
-        display: inline-block;
-        margin-bottom: 20px;
-    }
-
     .info {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .agency-corner {
+
+        position: static;
+
+        text-align: left;
+
+        margin-bottom: 15px;
+    }
+
+    body {
+
+        padding:
+            25px 10px;
+    }
+
+    footer {
+
+        flex-direction:
+            column;
     }
 }
 
 </style>
 </head>
 
+
 <body>
 
 
-<!-- LETRAS H E L P -->
+<!-- ======================================
+     LETRAS DEL FONDO
+     ====================================== -->
 
-<div class="help-letter h1">H</div>
-<div class="help-letter e1">E</div>
-<div class="help-letter l1">L</div>
-<div class="help-letter p1">P</div>
+<div class="red-letter l1">H</div>
+<div class="red-letter l2">E</div>
+<div class="red-letter l3">L</div>
+<div class="red-letter l4">P</div>
 
-<div class="help-letter h2">H</div>
-<div class="help-letter e2">E</div>
-<div class="help-letter l2">L</div>
-<div class="help-letter p2">P</div>
-
-<div class="help-letter h3">H</div>
-<div class="help-letter e3">E</div>
-<div class="help-letter l3">L</div>
-<div class="help-letter p3">P</div>
-
-<div class="help-letter h4">H</div>
-<div class="help-letter e4">E</div>
-<div class="help-letter l4">L</div>
-<div class="help-letter p4">P</div>
+<div class="red-letter l5">H</div>
+<div class="red-letter l6">E</div>
+<div class="red-letter l7">L</div>
+<div class="red-letter l8">P</div>
 
 
-<!-- DOCUMENTO -->
+<!-- ======================================
+     IDIOMAS
+     ====================================== -->
+
+<div class="language-box">
+
+    <button
+        id="esBtn"
+        onclick="setLanguage('es')">
+        ES
+    </button>
+
+    <button
+        id="enBtn"
+        onclick="setLanguage('en')">
+        EN
+    </button>
+
+    <button
+        id="ptBtn"
+        onclick="setLanguage('pt')">
+        PT
+    </button>
+
+</div>
+
+
+<!-- ======================================
+     DOCUMENTO
+     ====================================== -->
 
 <div class="paper">
 
 
-    <!-- AGENCIA -->
+    <!-- ESQUINA -->
 
-    <div class="agency">
+    <div class="agency-corner">
 
-        <strong>NO SECURITY AGENCY</strong><br>
-        INTERNAL ARCHIVE DIVISION<br>
-        ESTABLISHED — 1899
+        <b>NO SECURITY AGENCY</b>
 
-    </div>
+        <br>
 
+        <span data-i18n="division">
+            DIVISIÓN DE ARCHIVO INTERNO
+        </span>
 
-    <!-- ENCABEZADO -->
+        <br>
 
-    <div class="header">
-
-        <div class="logo">
-            NO SECURITY AGENCY
-        </div>
-
-        <div class="department">
-            DEPARTMENT OF BEHAVIORAL OBSERVATION
-        </div>
-
-    </div>
-
-
-    <div class="confidential">
-        CONFIDENTIAL
-    </div>
-
-
-    <h1>
-        PATIENT BEHAVIORAL RECORD
-    </h1>
-
-
-    <!-- INFORMACIÓN DEL PACIENTE -->
-
-    <div class="info">
-
-        <div class="line">
-            CASE NUMBER:
-            <strong>0047</strong>
-        </div>
-
-        <div class="line">
-            STATUS:
-            <strong>ACTIVE</strong>
-        </div>
-
-
-        <div class="line">
-            PATIENT:
-
-            <span class="secret">
-                Alex
-            </span>
-
-        </div>
-
-
-        <div class="line">
-            AGE:
-
-            <span class="secret">
-                ERROR
-            </span>
-
-        </div>
-
-
-        <div class="line">
-            DATE:
-            18 / 06 / 2006
-        </div>
-
-
-        <div class="line">
-            OBSERVATION LEVEL:
-
-            <span class="secret">
-                IV
-            </span>
-
-        </div>
-
-    </div>
-
-
-    <!-- OBSERVACIÓN INICIAL -->
-
-    <h2>
-        INITIAL OBSERVATION
-    </h2>
-
-
-    <div class="observation">
-
-        <p>
-
-            Subject was selected for an experimental
-            cognitive transfer test.
-
-        </p>
-
-
-        <p>
-
-            The objective of the procedure was to determine
-            whether human consciousness could be temporarily
-            transferred into an artificial interactive
-            environment.
-
-        </p>
-
-
-        <p>
-
-            The environment used during the test was
-            officially designated:
-
-            <span class="secret">
-                R
-            </span>
-
-        </p>
-
-
-        <p>
-
-            The subject was not informed of the actual
-            purpose of the experiment.
-
-        </p>
-
-
-        <p>
-
-            Initial results appeared normal.
-
-            <span class="secret">
-                No external abnormalities were detected.
-            </span>
-
-        </p>
-
-
-        <p>
-
-            At approximately 03:17, the subject stopped
-            responding to the observation team.
-
-        </p>
-
-
-        <div class="quote">
-
-            <span class="secret">
-
-                "There is someone else here."
-
-            </span>
-
-        </div>
-
-
-        <p>
-
-            When asked who he was referring to, the subject
-            provided no verbal response.
-
-            <span class="secret">
-
-                Instead, he pointed toward the tree.
-
-            </span>
-
-        </p>
-
-
-        <!-- FRASE OCULTA -->
-
-        <p>
-
-            The following information was removed
-            from the original report:
-
-            <span class="secret">
-                el
-            </span>
-
-            <span class="secret">
-                arbol
-            </span>
-
-            <span class="secret">
-                esta
-            </span>
-
-            <span class="secret">
-                cerca
-            </span>
-
-            <span class="secret">
-                alex.
-            </span>
-
-        </p>
-
-    </div>
-
-
-    <!-- INCIDENTE -->
-
-    <h2>
-        INCIDENT REPORT
-    </h2>
-
-
-    <div class="observation">
-
-        <p>
-
-            At 03:26 the recording equipment registered
-            an unidentified signal.
-
-        </p>
-
-
-        <p>
-
-            The signal was not generated by the testing
-            environment.
-
-        </p>
-
-
-        <p>
-
-            The observation room subsequently lost
-            communication with the subject.
-
-        </p>
-
-
-        <p>
-
-            <span class="secret">
-                █████████████████████████████████
-            </span>
-
-        </p>
-
-
-        <p>
-
-            <span class="secret">
-                TRANSFER TERMINATION FAILED.
-            </span>
-
-        </p>
-
-
-        <p>
-
-            <span class="secret">
-                SUBJECT REMAINED ACTIVE.
-            </span>
-
-        </p>
-
-    </div>
-
-
-    <!-- ADVERTENCIA -->
-
-    <div class="warning">
-
-        WARNING: This document contains restricted
-        experimental information.
-
-        Unauthorized reproduction or distribution
-        is prohibited.
-
-    </div>
-
-
-    <div class="stamp">
-
-        ARCHIVE — ACTIVE
-
-    </div>
-
-
-    <!-- PIE -->
-
-    <div class="footer">
-
-        NO SECURITY AGENCY — INTERNAL ARCHIVE<br>
-
-        RECORD CREATED: 18 / 06 / 2006<br>
-
-        DOCUMENT REVISION: 02<br>
-
-        FILE STATUS:
-
-        <span class="secret">
-            DO NOT DELETE
+        <span data-i18n="founded">
+            FUNDADA — 1899
         </span>
 
     </div>
 
 
+
+    <!-- ENCABEZADO -->
+
+    <header>
+
+        <h1>
+            NO SECURITY AGENCY
+        </h1>
+
+        <p data-i18n="department">
+            DEPARTAMENTO DE OBSERVACIÓN CONDUCTUAL
+        </p>
+
+        <div
+            class="stamp"
+            data-i18n="confidential">
+
+            CONFIDENCIAL
+
+        </div>
+
+    </header>
+
+
+
+    <!-- INFORMACIÓN -->
+
+    <h2 data-i18n="patientInfo">
+
+        INFORMACIÓN DEL PACIENTE
+
+    </h2>
+
+
+    <div class="info">
+
+
+        <div class="line">
+
+            <span
+                class="label"
+                data-i18n="case">
+
+                CASO:
+
+            </span>
+
+            0047
+
+        </div>
+
+
+
+        <div class="line">
+
+            <span
+                class="label"
+                data-i18n="status">
+
+                ESTADO:
+
+            </span>
+
+            <span data-i18n="active">
+
+                ACTIVO
+
+            </span>
+
+        </div>
+
+
+
+        <div class="line">
+
+            <span
+                class="label"
+                data-i18n="name">
+
+                NOMBRE:
+
+            </span>
+
+            <span class="secret">
+
+                <span
+                    class="secretText"
+
+                    data-es="Alex"
+                    data-en="Alex"
+                    data-pt="Alex">
+
+                    Alex
+
+                </span>
+
+            </span>
+
+        </div>
+
+
+
+        <div class="line">
+
+            <span
+                class="label"
+                data-i18n="age">
+
+                EDAD:
+
+            </span>
+
+            <span class="secret">
+
+                <span
+                    class="secretText"
+
+                    data-es="ERROR"
+                    data-en="ERROR"
+                    data-pt="ERRO">
+
+                    ERROR
+
+                </span>
+
+            </span>
+
+        </div>
+
+
+
+        <div class="line">
+
+            <span
+                class="label"
+                data-i18n="date">
+
+                FECHA:
+
+            </span>
+
+            18/06/2006
+
+        </div>
+
+
+
+        <div class="line">
+
+            <span
+                class="label"
+                data-i18n="level">
+
+                NIVEL DE OBSERVACIÓN:
+
+            </span>
+
+            <span class="secret">
+
+                <span
+                    class="secretText"
+
+                    data-es="IV"
+                    data-en="IV"
+                    data-pt="IV">
+
+                    IV
+
+                </span>
+
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- OBSERVACIÓN -->
+
+    <h2 data-i18n="initial">
+
+        OBSERVACIÓN INICIAL
+
+    </h2>
+
+
+    <div class="text">
+
+
+        <p>
+
+            <span data-i18n="p1a">
+
+                El sujeto fue seleccionado para una prueba experimental
+                de transferencia cognitiva.
+
+            </span>
+
+            <span class="secret">
+
+                <span
+                    class="secretText"
+
+                    data-es="El"
+                    data-en="The"
+                    data-pt="A">
+
+                    El
+
+                </span>
+
+            </span>
+
+            <span data-i18n="p1b">
+
+                procedimiento comenzó a las 01:40.
+
+            </span>
+
+        </p>
+
+
+
+        <p>
+
+            <span data-i18n="p2a">
+
+                El objetivo era transferir temporalmente la conciencia
+                humana a un entorno interactivo artificial.
+
+            </span>
+
+            <span class="secret">
+
+                <span
+                    class="secretText"
+
+                    data-es="árbol"
+                    data-en="tree"
+                    data-pt="árvore">
+
+                    árbol
+
+                </span>
+
+            </span>
+
+            <span data-i18n="p2b">
+
+                no fue mencionado durante las instrucciones iniciales.
+
+            </span>
+
+        </p>
+
+
+
+        <p>
+
+            <span data-i18n="p3a">
+
+                El entorno utilizado recibió la designación
+
+            </span>
+
+            <span class="secret">
+
+                <span
+                    class="secretText"
+
+                    data-es="R"
+                    data-en="R"
+                    data-pt="R">
+
+                    R
+
+                </span>
+
+            </span>
+
+            <span data-i18n="p3b">
+
+                . El sujeto desconocía el propósito real de la prueba.
+
+            </span>
+
+        </p>
+
+
+
+        <p>
+
+            <span data-i18n="p4a">
+
+                Durante los primeros minutos no se detectaron anomalías.
+
+                La actividad cerebral permaneció estable y el sujeto
+                respondió correctamente a todas las preguntas.
+
+            </span>
+
+            <span class="secret">
+
+                <span
+                    class="secretText"
+
+                    data-es="está"
+                    data-en="is"
+                    data-pt="está">
+
+                    está
+
+                </span>
+
+            </span>
+
+            <span data-i18n="p4b">
+
+                registrado en el informe original.
+
+            </span>
+
+        </p>
+
+
+
+        <!-- INCIDENTE -->
+
+        <div class="incident">
+
+
+            <p>
+
+                <b data-i18n="time">
+
+                    03:17 — EL SUJETO DEJÓ DE RESPONDER.
+
+                </b>
+
+            </p>
+
+
+
+            <p>
+
+                <span data-i18n="message">
+
+                    Mensaje registrado:
+
+                </span>
+
+                <span class="secret">
+
+                    <span
+                        class="secretText"
+
+                        data-es="Hay alguien más aquí."
+                        data-en="There is someone else here."
+                        data-pt="Há outra pessoa aqui.">
+
+                        Hay alguien más aquí.
+
+                    </span>
+
+                </span>
+
+            </p>
+
+
+
+            <p>
+
+                <span data-i18n="p5a">
+
+                    El sujeto permaneció mirando hacia la ventana
+                    durante aproximadamente nueve segundos.
+
+                </span>
+
+                <span class="secret">
+
+                    <span
+                        class="secretText"
+
+                        data-es="cerca"
+                        data-en="near"
+                        data-pt="perto">
+
+                        cerca
+
+                    </span>
+
+                </span>
+
+                <span data-i18n="p5b">
+
+                    de la salida principal.
+
+                </span>
+
+            </p>
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- SEGUNDA SECCIÓN -->
+
+    <h2 data-i18n="additional">
+
+        OBSERVACIONES ADICIONALES
+
+    </h2>
+
+
+    <div class="text">
+
+
+        <p data-i18n="p6">
+
+            A las 03:24 se intentó restablecer la comunicación.
+            El sujeto respondió únicamente mediante movimientos
+            de la mano.
+
+        </p>
+
+
+
+        <p>
+
+            <span data-i18n="p7a">
+
+                El operador solicitó una descripción del entorno.
+
+            </span>
+
+            <span class="secret">
+
+                <span
+                    class="secretText"
+
+                    data-es="Alex."
+                    data-en="Alex."
+                    data-pt="Alex.">
+
+                    Alex.
+
+                </span>
+
+            </span>
+
+            <span data-i18n="p7b">
+
+                La respuesta fue clasificada como incomprensible.
+
+            </span>
+
+        </p>
+
+
+
+        <p>
+
+            <span data-i18n="p8">
+
+                La sesión fue terminada inmediatamente después.
+
+                No se autorizó una segunda transferencia.
+
+            </span>
+
+        </p>
+
+
+    </div>
+
+
+
+    <!-- REPORTE -->
+
+    <h2 data-i18n="report">
+
+        INFORME DEL INCIDENTE
+
+    </h2>
+
+
+    <div class="text">
+
+
+        <p data-i18n="incident1">
+
+            Tras la interrupción, la cámara de pruebas fue inspeccionada.
+
+            No se encontró ninguna alteración física en las instalaciones.
+
+        </p>
+
+
+
+        <p>
+
+            <span
+                class="warning"
+                data-i18n="warning">
+
+                ADVERTENCIA:
+
+            </span>
+
+            <span class="secret">
+
+                <span
+                    class="secretText"
+
+                    data-es="No repetir el procedimiento."
+                    data-en="Do not repeat the procedure."
+                    data-pt="Não repetir o procedimento.">
+
+                    No repetir el procedimiento.
+
+                </span>
+
+            </span>
+
+        </p>
+
+
+
+        <p data-i18n="incident2">
+
+            El expediente fue sellado y trasladado al archivo interno.
+
+            Cualquier copia no autorizada deberá ser destruida.
+
+        </p>
+
+
+    </div>
+
+
+
+    <!-- PIE -->
+
+    <footer>
+
+        <span>
+
+            NO SECURITY AGENCY — ARCHIVO INTERNO
+
+        </span>
+
+
+        <span>
+
+            <span data-i18n="record">
+
+                REGISTRO:
+
+            </span>
+
+            18/06/2006 —
+
+            <span data-i18n="revision">
+
+                REVISIÓN 02
+
+            </span>
+
+        </span>
+
+    </footer>
+
+
 </div>
 
 
-<!--
-====================================================
 
-NO SECURITY AGENCY
-INTERNAL SYSTEM NOTE
+<script>
 
-CASE 0047
 
-The original designation of the environment
-was not "R".
+/* =========================================
+   TRADUCCIONES
+   ========================================= */
 
-The designation was changed after the incident.
+const translations = {
 
-DO NOT REFER TO THE ORIGINAL NAME.
 
-====================================================
--->
+    es: {
 
+        division:
+        "DIVISIÓN DE ARCHIVO INTERNO",
+
+        founded:
+        "FUNDADA — 1899",
+
+        department:
+        "DEPARTAMENTO DE OBSERVACIÓN CONDUCTUAL",
+
+        confidential:
+        "CONFIDENCIAL",
+
+        patientInfo:
+        "INFORMACIÓN DEL PACIENTE",
+
+        case:
+        "CASO:",
+
+        status:
+        "ESTADO:",
+
+        active:
+        "ACTIVO",
+
+        name:
+        "NOMBRE:",
+
+        age:
+        "EDAD:",
+
+        date:
+        "FECHA:",
+
+        level:
+        "NIVEL DE OBSERVACIÓN:",
+
+        initial:
+        "OBSERVACIÓN INICIAL",
+
+        p1a:
+        "El sujeto fue seleccionado para una prueba experimental de transferencia cognitiva.",
+
+        p1b:
+        "procedimiento comenzó a las 01:40.",
+
+        p2a:
+        "El objetivo era transferir temporalmente la conciencia humana a un entorno interactivo artificial.",
+
+        p2b:
+        "no fue mencionado durante las instrucciones iniciales.",
+
+        p3a:
+        "El entorno utilizado recibió la designación",
+
+        p3b:
+        ". El sujeto desconocía el propósito real de la prueba.",
+
+        p4a:
+        "Durante los primeros minutos no se detectaron anomalías. La actividad cerebral permaneció estable y el sujeto respondió correctamente a todas las preguntas.",
+
+        p4b:
+        "registrado en el informe original.",
+
+        time:
+        "03:17 — EL SUJETO DEJÓ DE RESPONDER.",
+
+        message:
+        "Mensaje registrado:",
+
+        p5a:
+        "El sujeto permaneció mirando hacia la ventana durante aproximadamente nueve segundos.",
+
+        p5b:
+        "de la salida principal.",
+
+        additional:
+        "OBSERVACIONES ADICIONALES",
+
+        p6:
+        "A las 03:24 se intentó restablecer la comunicación. El sujeto respondió únicamente mediante movimientos de la mano.",
+
+        p7a:
+        "El operador solicitó una descripción del entorno.",
+
+        p7b:
+        "La respuesta fue clasificada como incomprensible.",
+
+        p8:
+        "La sesión fue terminada inmediatamente después. No se autorizó una segunda transferencia.",
+
+        report:
+        "INFORME DEL INCIDENTE",
+
+        incident1:
+        "Tras la interrupción, la cámara de pruebas fue inspeccionada. No se encontró ninguna alteración física en las instalaciones.",
+
+        warning:
+        "ADVERTENCIA:",
+
+        incident2:
+        "El expediente fue sellado y trasladado al archivo interno. Cualquier copia no autorizada deberá ser destruida.",
+
+        record:
+        "REGISTRO:",
+
+        revision:
+        "REVISIÓN 02"
+    },
+
+
+    en: {
+
+        division:
+        "INTERNAL ARCHIVE DIVISION",
+
+        founded:
+        "ESTABLISHED — 1899",
+
+        department:
+        "BEHAVIORAL OBSERVATION DEPARTMENT",
+
+        confidential:
+        "CONFIDENTIAL",
+
+        patientInfo:
+        "PATIENT INFORMATION",
+
+        case:
+        "CASE:",
+
+        status:
+        "STATUS:",
+
+        active:
+        "ACTIVE",
+
+        name:
+        "NAME:",
+
+        age:
+        "AGE:",
+
+        date:
+        "DATE:",
+
+        level:
+        "OBSERVATION LEVEL:",
+
+        initial:
+        "INITIAL OBSERVATION",
+
+        p1a:
+        "The subject was selected for an experimental cognitive transfer test.",
+
+        p1b:
+        "procedure began at 01:40.",
+
+        p2a:
+        "The objective was to temporarily transfer human consciousness into an artificial interactive environment.",
+
+        p2b:
+        "was not mentioned during the initial instructions.",
+
+        p3a:
+        "The environment used was designated",
+
+        p3b:
+        ". The subject was unaware of the actual purpose of the test.",
+
+        p4a:
+        "During the first few minutes no abnormalities were detected. Brain activity remained stable and the subject answered all questions correctly.",
+
+        p4b:
+        "recorded in the original report.",
+
+        time:
+        "03:17 — SUBJECT STOPPED RESPONDING.",
+
+        message:
+        "Recorded message:",
+
+        p5a:
+        "The subject remained looking toward the window for approximately nine seconds.",
+
+        p5b:
+        "from the main exit.",
+
+        additional:
+        "ADDITIONAL OBSERVATIONS",
+
+        p6:
+        "At 03:24 communication was attempted again. The subject responded only through hand movements.",
+
+        p7a:
+        "The operator requested a description of the environment.",
+
+        p7b:
+        "The response was classified as incomprehensible.",
+
+        p8:
+        "The session was terminated immediately afterward. A second transfer was not authorized.",
+
+        report:
+        "INCIDENT REPORT",
+
+        incident1:
+        "Following the interruption, the testing chamber was inspected. No physical alteration was found within the facility.",
+
+        warning:
+        "WARNING:",
+
+        incident2:
+        "The file was sealed and transferred to the internal archive. Any unauthorized copy must be destroyed.",
+
+        record:
+        "RECORD:",
+
+        revision:
+        "REVISION 02"
+    },
+
+
+    pt: {
+
+        division:
+        "DIVISÃO DE ARQUIVO INTERNO",
+
+        founded:
+        "FUNDADA — 1899",
+
+        department:
+        "DEPARTAMENTO DE OBSERVAÇÃO COMPORTAMENTAL",
+
+        confidential:
+        "CONFIDENCIAL",
+
+        patientInfo:
+        "INFORMAÇÕES DO PACIENTE",
+
+        case:
+        "CASO:",
+
+        status:
+        "STATUS:",
+
+        active:
+        "ATIVO",
+
+        name:
+        "NOME:",
+
+        age:
+        "IDADE:",
+
+        date:
+        "DATA:",
+
+        level:
+        "NÍVEL DE OBSERVAÇÃO:",
+
+        initial:
+        "OBSERVAÇÃO INICIAL",
+
+        p1a:
+        "O sujeito foi selecionado para um teste experimental de transferência cognitiva.",
+
+        p1b:
+        "procedimento começou às 01:40.",
+
+        p2a:
+        "O objetivo era transferir temporariamente a consciência humana para um ambiente interativo artificial.",
+
+        p2b:
+        "não foi mencionado durante as instruções iniciais.",
+
+        p3a:
+        "O ambiente utilizado recebeu a designação",
+
+        p3b:
+        ". O sujeito desconhecia o verdadeiro propósito do teste.",
+
+        p4a:
+        "Durante os primeiros minutos nenhuma anomalia foi detectada. A atividade cerebral permaneceu estável e o sujeito respondeu corretamente a todas as perguntas.",
+
+        p4b:
+        "registrado no relatório original.",
+
+        time:
+        "03:17 — O SUJEITO PAROU DE RESPONDER.",
+
+        message:
+        "Mensagem registrada:",
+
+        p5a:
+        "O sujeito permaneceu olhando para a janela durante aproximadamente nove segundos.",
+
+        p5b:
+        "da saída principal.",
+
+        additional:
+        "OBSERVAÇÕES ADICIONAIS",
+
+        p6:
+        "Às 03:24 foi realizada uma nova tentativa de comunicação. O sujeito respondeu apenas através de movimentos da mão.",
+
+        p7a:
+        "O operador solicitou uma descrição do ambiente.",
+
+        p7b:
+        "A resposta foi classificada como incompreensível.",
+
+        p8:
+        "A sessão foi encerrada imediatamente depois. Uma segunda transferência não foi autorizada.",
+
+        report:
+        "RELATÓRIO DO INCIDENTE",
+
+        incident1:
+        "Após a interrupção, a câmara de testes foi inspecionada. Nenhuma alteração física foi encontrada nas instalações.",
+
+        warning:
+        "AVISO:",
+
+        incident2:
+        "O arquivo foi selado e transferido para o arquivo interno. Qualquer cópia não autorizada deverá ser destruída.",
+
+        record:
+        "REGISTRO:",
+
+        revision:
+        "REVISÃO 02"
+    }
+
+};
+
+
+
+/* =========================================
+   CAMBIAR IDIOMA
+   ========================================= */
+
+function setLanguage(language) {
+
+
+    document.documentElement.lang =
+        language;
+
+
+    /*
+       Cambiar textos normales
+    */
+
+    document
+        .querySelectorAll("[data-i18n]")
+        .forEach(element => {
+
+            const key =
+                element.getAttribute(
+                    "data-i18n"
+                );
+
+            if (
+                translations[language][key]
+            ) {
+
+                element.textContent =
+                    translations[language][key];
+
+            }
+
+        });
+
+
+
+    /*
+       Cambiar textos ocultos
+    */
+
+    document
+        .querySelectorAll(".secretText")
+        .forEach(element => {
+
+            const translated =
+                element.getAttribute(
+                    "data-" + language
+                );
+
+            if (translated) {
+
+                element.textContent =
+                    translated;
+
+            }
+
+        });
+
+
+
+    /*
+       Marcar idioma
+    */
+
+    document
+        .querySelectorAll(
+            ".language-box button"
+        )
+        .forEach(button => {
+
+            button.classList.remove(
+                "active"
+            );
+
+        });
+
+
+    document
+        .getElementById(
+            language + "Btn"
+        )
+        .classList.add("active");
+
+
+    /*
+       Guardar idioma
+    */
+
+    localStorage.setItem(
+        "argLanguage",
+        language
+    );
+
+}
+
+
+
+/* =========================================
+   IDIOMA INICIAL
+   ========================================= */
+
+const savedLanguage =
+    localStorage.getItem(
+        "argLanguage"
+    ) || "es";
+
+
+setLanguage(
+    savedLanguage
+);
+
+</script>
 
 </body>
 </html>
