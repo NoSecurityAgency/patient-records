@@ -1,1 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archivo de Observación — Caso 0047</title>
 
+    <style>
+        body {
+            margin: 0;
+            background: #d8d5cc;
+            color: #252525;
+            font-family: "Courier New", monospace;
+        }
+
+        .paper {
+            width: 850px;
+            max-width: 90%;
+            margin: 50px auto;
+            padding: 45px;
+            background: #eee9dc;
+            box-sizing: border-box;
+
+            border: 1px solid #aaa;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+
+            position: relative;
+        }
+
+        .header {
+            border-bottom: 3px double #333;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+
+        .institution {
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .department {
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+        .confidential {
+            position: absolute;
+            right: 35px;
+            top: 35px;
+
+            border: 2px solid #8b0000;
+            color: #8b0000;
+
+            padding: 8px 12px;
+            font-weight: bold;
+            transform: rotate(-7deg);
+        }
+
+        h1 {
+            font-size: 23px;
+            margin-top: 30px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 16px;
+            border-bottom: 1px solid #555;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        .info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .line {
+            border-bottom: 1px dotted #777;
+            padding: 5px;
+        }
+
+        .redacted {
+            background: #202020;
+            color: #202020;
+            padding: 0 5px;
+            user-select: none;
+        }
+
+        .observation {
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .warning {
+            margin-top: 30px;
+            padding: 12px;
+            border: 1px solid #777;
+            font-size: 12px;
+            background: #e1ddd1;
+        }
+
+        .footer {
+            margin-top: 45px;
+            padding-top: 10px;
+            border-top: 1px solid #555;
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .stamp {
+            margin-top: 30px;
+            display: inline-block;
+            border: 2px solid #333;
+            padding: 10px 20px;
+            font-weight: bold;
+            transform: rotate(-2deg);
+        }
+
+        @media (max-width: 700px) {
+            .paper {
+                margin: 15px auto;
+                padding: 25px;
+            }
+
+            .confidential {
+                position: static;
+                display: inline-block;
+                margin-top: 15px;
+            }
+
+            .info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="paper">
+
+    <div class="confidential">
+        CONFIDENCIAL
+    </div>
+
+    <div class="header">
+        <div class="institution">
+            DEPARTAMENTO DE OBSERVACIÓN
+        </div>
+
+        <div class="department">
+            UNIDAD DE REGISTRO Y EVALUACIÓN CONDUCTUAL
+        </div>
+    </div>
+
+    <h1>Expediente de observación</h1>
+
+    <div class="info">
+
+        <div class="line">
+            EXPEDIENTE: 0047
+        </div>
+
+        <div class="line">
+            ESTADO: ACTIVO
+        </div>
+
+        <div class="line">
+            PACIENTE: <span class="redacted">████████</span>
+        </div>
+
+        <div class="line">
+            EDAD: <span class="redacted">██</span>
+        </div>
+
+        <div class="line">
+            FECHA DE INGRESO: 14/08/2013
+        </div>
+
+        <div class="line">
+            NIVEL DE OBSERVACIÓN: III
+        </div>
+
+    </div>
+
+    <h2>OBSERVACIONES INICIALES</h2>
+
+    <div class="observation">
+
+        <p>
+            El sujeto presenta un comportamiento generalmente
+            cooperativo durante las sesiones de observación.
+        </p>
+
+        <p>
+            Durante los primeros días no se registraron
+            anomalías significativas.
+        </p>
+
+        <p>
+            Sin embargo, el día 17/08/2013 el paciente comenzó
+            a referirse repetidamente a una persona que,
+            según los registros disponibles, no se encontraba
+            presente en las instalaciones.
+        </p>
+
+        <p>
+            Al preguntarle por dicha persona, el sujeto respondió:
+        </p>
+
+        <p>
+            <strong>
+                "Él ya estaba aquí cuando ustedes llegaron."
+            </strong>
+        </p>
+
+    </div>
+
+    <h2>NOTA DEL OBSERVADOR</h2>
+
+    <div class="observation">
+
+        <p>
+            Se recomienda continuar con la observación
+            sin informar al paciente sobre la existencia
+            del presente expediente.
+        </p>
+
+        <p>
+            El acceso al registro queda limitado al personal
+            autorizado.
+        </p>
+
+    </div>
+
+    <div class="warning">
+        ADVERTENCIA: La reproducción, modificación o distribución
+        de este documento sin autorización está prohibida.
+    </div>
+
+    <div class="stamp">
+        ARCHIVO ACTIVO
+    </div>
+
+    <div class="footer">
+        DOCUMENTO DIGITALIZADO — REGISTRO Nº 0047<br>
+        Última actualización: 21/08/2013
+    </div>
+
+</div>
+
+<!--
+    REGISTRO INTERNO:
+    El expediente no debería estar disponible públicamente.
+    Archivo relacionado: 0047-B
+-->
+
+</body>
+</html>
